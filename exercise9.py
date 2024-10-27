@@ -5,7 +5,7 @@ import random
 # distance. Add a class initializer that sets the first two of the properties based on parameter values. The current
 # speed and travelled distance of a new car must be automatically set to zero. Write a main program where you create a
 # new car (registration number ABC-123, maximum speed 142 km/h). Finally, print out all the properties of the new car.
-'''
+
 class Car:
     def __init__(self, registration_number, maximum_speed):
         self.registration_number = registration_number
@@ -76,7 +76,7 @@ print(f'The speed of car after increased by speed +50 : {new_car.current_speed}'
 new_car.accelerate(-200)
 print(f'The speed of car after breaking -200km/h : {new_car.current_speed}')
 
-'''
+
 
 #Question 3
 
