@@ -1,5 +1,5 @@
 # Python object-oriented exercises
-import random
+
 # Question 1
 #Write a Car class that has the following properties: registration number, maximum speed, current speed and travelled
 # distance. Add a class initializer that sets the first two of the properties based on parameter values. The current
@@ -126,6 +126,7 @@ new_car.drive(1.5)
 print(f"Travelled distance after driving 1.5 hours: {new_car.travelled_distance} km")
 
 
+#question 4
 #Now we will program a car race. The travelled distance of a new car is initialized as zero. At the beginning of the
 #main program, create a list that consists of 10 car objects created using a loop. The maximum speed of each new car
 # is a random value between 100 km/h and 200 km/h. The registration numbers are created as follows: "ABC-1", "ABC-2"
@@ -137,6 +138,9 @@ print(f"Travelled distance after driving 1.5 hours: {new_car.travelled_distance}
 # The race continues until one of the cars has advanced at least 10,000 kilometers. Finally, the properties of each
 # car are printed out formatted into a clear table.
 
+
+import random
+from tabulate import tabulate
 class Car:
     def __init__(self, registration_number, maximum_speed):
         self.registration_number = registration_number
@@ -179,10 +183,14 @@ while race_ongoing:
             race_ongoing = False
             break
 
-print(f" Registration \ total max_speed\ total current speed\ total travelled distance")
-print("-" * 60)
+
+race_table=[]
 for car in cars:
-    print(car)
+    race_table.append([car.registration_number, car.maximum_speed, car.current_speed, car.travelled_distance])
+
+headers=["Registration Number", "Maximum Speed", "Current Speed", "Travelled Distance"]
+print(f'The table is given below: \n{(tabulate(race_table, headers=headers, tablefmt= "fancy_grid"))}')
+
 
 
 
