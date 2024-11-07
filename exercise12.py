@@ -42,7 +42,7 @@ def get_weather(municipality, api_key):
         print(f"Error API-request : {e}")
 
 if __name__ == "__main__":
-    api_key = "cd22e7856f3fe994027e21f9723de722"
+    api_key = "api key" #(my own api key)
     municipality = input("Enter the name of the municipality: ").strip()
     get_weather(municipality, api_key)
 
