@@ -173,16 +173,21 @@ for i in range (1,11):
     car = Car(registration_number, maximum_speed)
     cars.append(car)
 
+
+#race
 race_ongoing = True
+hours=0
 while race_ongoing:
+    hours= hours + 1
     for car in cars:
         change_speed=random.randint(-10 , 15)
         car.accelerate(change_speed)
         car.drive(1)
-        if car.travelled_distance >= 10000:
+        if car.travelled_distance > 10000:
             race_ongoing = False
-            break
 
+
+print(f'Race finished after {hours} hours')
 
 race_table=[]
 for car in cars:
