@@ -19,10 +19,10 @@ class Car:
                 f'current speed : {self.current_speed} km/h '
                 f'travelled distance: {self.travelled_distance} km')
 
-    def get_registration_number(self, registration_number):
+    def get_registration_number(self):
         return self.registration_number
 
-    def get_maximum_speed(self, maximum_speed):
+    def get_maximum_speed(self):
         return self.maximum_speed
 
 
