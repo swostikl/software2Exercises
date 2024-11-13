@@ -68,13 +68,12 @@ print(str(new_car))
 
 
 new_car.accelerate(30)
-print(f'The current speed after increased by speed +30 km/h : {new_car.current_speed}')
 new_car.accelerate(70)
-print(f'The current speed after increased by speed +70km/h : {new_car.current_speed}')
 new_car.accelerate(50)
 print(f'The speed of car after increased by speed +50 : {new_car.current_speed}')
+
 new_car.accelerate(-200)
-print(f'The speed of car after breaking -200km/h : {new_car.current_speed}')
+print(f'The final speed of car after breaking -200km/h : {new_car.current_speed}')
 
 
 
@@ -113,15 +112,16 @@ class Car:
 new_car = Car("ABC-123", 142)
 #accelerate
 new_car.accelerate(30)
-print(f" Current speed after accelerating +30km/h : {new_car.current_speed}")
 new_car.accelerate(70)
-print(f" Current speed after accelerating +70km/h : {new_car.current_speed}")
 new_car.accelerate(50)
 print(f"Current speed after accelerating +50km/h : {new_car.current_speed}")
 # brake
 new_car.accelerate(-200)
-print(f"Current speed after accelerating -200km/h : {new_car.current_speed}")
+print(f"Final speed after accelerating -200km/h : {new_car.current_speed}")
+
+
 # Travelled distance covered by driving
+new_car.current_speed = 60
 new_car.drive(1.5)
 print(f"Travelled distance after driving 1.5 hours: {new_car.travelled_distance} km")
 
