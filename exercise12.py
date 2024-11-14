@@ -6,12 +6,8 @@ import requests
 def get_chuck_norris_joke():
     url="https://api.chucknorris.io/jokes/random"
     response = requests.get(url)
-    if response.status_code == 200:
-        joke_data = response.json()
-        print(joke_data['value'])
-    else:
-        print("Request failed to fetch a joke. Try Again!")
-
+    joke_data=(response.json())
+    print(joke_data['value'])
 get_chuck_norris_joke()
 
 
@@ -24,7 +20,7 @@ get_chuck_norris_joke()
 
 # application programming interfaces
 import requests
-
+from pi import weather_info
 def get_weather(municipality, api_key):
     url = f"http://api.openweathermap.org/data/2.5/weather?q={municipality}&appid={api_key}&units=metric"
     try:
@@ -42,7 +38,7 @@ def get_weather(municipality, api_key):
         print(f"Error API-request : {e}")
 
 if __name__ == "__main__":
-    api_key = "api key" #(my own api key)
+    api_key = weather_info() #(my own api key)
     municipality = input("Enter the name of the municipality: ").strip()
     get_weather(municipality, api_key)
 
