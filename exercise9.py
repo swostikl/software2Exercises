@@ -119,7 +119,8 @@ print(f"Current speed after accelerating +50km/h : {new_car.current_speed}")
 new_car.accelerate(-200)
 print(f"Final speed after accelerating -200km/h : {new_car.current_speed}")
 
-
+#set travelled distance
+new_car.travelled_distance=2000
 # Travelled distance covered by driving
 new_car.current_speed = 60
 new_car.drive(1.5)
