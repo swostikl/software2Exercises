@@ -7,6 +7,7 @@ import math
 
 import mysql.connector
 from flask import Flask, request, jsonify
+'''
 app=Flask(__name__)
 
 @app.route("/primeNumber")
@@ -35,6 +36,8 @@ def prime_number():
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5000)
 
+    '''
+
 
 #question2
 # Implement a backend service that gets the ICAO code of an airport and then returns the name and location of the airport
@@ -44,7 +47,7 @@ if __name__ == '__main__':
 
 
 connection = mysql.connector.connect(
-    host="localhost",
+    host="127.0.0.1",
     port=3306,
     database='flight_game',
     user='swosti',
@@ -54,6 +57,8 @@ connection = mysql.connector.connect(
     collation="utf8mb4_general_ci"
     )
 cursor=connection.cursor()
+
+app = Flask(__name__)
 
 @app.route('/airport/<ICAO>', methods=['GET'])
 def airport(ICAO):
@@ -68,9 +73,9 @@ def airport(ICAO):
             }),400
     else:
             return jsonify({
-            "ICAO": ICAO,
-            "Name": results[0][0],
-            "location(Municipality)": results[0][1],
-        }),200
+                "ICAO": ICAO,
+                "Name": results[0][0],
+                "location(Municipality)": results[0][1],
+            }),300
 
 app.run(host='127.0.0.1', port=5000)
