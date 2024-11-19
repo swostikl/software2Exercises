@@ -65,10 +65,10 @@ class Car:
         self.travelled_distance += self.current_speed * hours
 
     def __str__(self):
-        return (f"{self.registration_number}  "
-                f"{self.max_speed} km/h  "
-                f"{self.current_speed} km/h  "
-                f"{self.travelled_distance} km  ")
+        return (f"Registration number : {self.registration_number}  "
+                f"Maximum speed : {self.max_speed} km/h  "
+                f"Current speed : {self.current_speed} km/h  "
+                f"Travelled Distance : {self.travelled_distance} km  ")
 
 class ElectricCar(Car):
     def __init__(self,registration_number,max_speed, battery_capacity):
@@ -76,7 +76,7 @@ class ElectricCar(Car):
         self.battery_capacity = battery_capacity
 
     def __str__(self):
-        return (f" Electric Car is :  {super().__str__()}  "
+        return (f" Electric Car's :  {super().__str__()}  "
                 f"Battery capacity : {self.battery_capacity} kWh")
 
 
@@ -86,7 +86,7 @@ class GasolineCar(Car):
         self.tank_volume = tank_volume
 
     def __str__(self):
-        return (f" Gasoline Car is :  {super().__str__()}  "
+        return (f" Gasoline Car's :  {super().__str__()}  "
                 f"Tank volume : {self.tank_volume} litres")
 
 # creating  cars for both
@@ -103,8 +103,6 @@ electric_car.drive(3)
 gasoline_car.drive(3)
 
 #print out values
-print(f"Title: "," Registration_number  ", "max_speed  ", "current_speed  ", "travelled_distance  " ," xxx ")
-print(f"-" * 100)
 print(electric_car)
 print(gasoline_car)
 
