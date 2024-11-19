@@ -17,7 +17,6 @@ get_chuck_norris_joke()
 # description text and temperature in Celsius degrees. Take a good look at the API documentation. You must register for
 # the service to receive the API key required for making API requests. Furthermore, find out how you can convert Kelvin
 # degrees into Celsius.
-
 # application programming interfaces
 import requests
 from pi import weather_info

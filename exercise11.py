@@ -90,17 +90,17 @@ class GasolineCar(Car):
                 f"Tank volume : {self.tank_volume} litres")
 
 # creating  cars for both
-electric_car=ElectricCar('SSL-1204',180,80)
-gasoline_car=GasolineCar('JJE-988',120,55)
+electric_car=ElectricCar('ABC-15',180,52.5)
+gasoline_car=GasolineCar('ACD-123',165,32.3)
 
 
 # set speed for cars
 electric_car.accelerate(80) #set max_speed
 gasoline_car.accelerate(60) #set max speed
 
-# drive for 4 hours
-electric_car.drive(4)
-gasoline_car.drive(4)
+# drive for 3 hours
+electric_car.drive(3)
+gasoline_car.drive(3)
 
 #print out values
 print(f"Title: "," Registration_number  ", "max_speed  ", "current_speed  ", "travelled_distance  " ," xxx ")
